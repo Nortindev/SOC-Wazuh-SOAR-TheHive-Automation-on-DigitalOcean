@@ -12,7 +12,7 @@ Below are the step-by-step instructions to replicate this deployment.
 
 ## 2. Setting Up the Environment
 ### 2.1 Windows Virtual Machine on VirtualBox
-- Download Windows 10 ISO from the official site.
+- Download Windows 10 ISO from the [official site](https://www.microsoft.com/PT-BR/software-download/windows10).
 - Create a VirtualBox VM:
   - Allocate 4 GB of RAM and 50 GB of storage.
   - Proceed with a custom installation, selecting "I don’t have a key" during installation.
@@ -30,7 +30,7 @@ Below are the step-by-step instructions to replicate this deployment.
   - Assign the firewall to the droplet.
   - Ensure ports 80 and 443 are open for the Wazuh dashboard access.
 
-## 4. Wazuh Installation on Droplet (Ubuntu)
+## 4. Wazuh Manager Installation on Droplet (Ubuntu)
 - Update the droplet:
 ```bash
 sudo apt update -y && sudo apt upgrade -y
