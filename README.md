@@ -18,14 +18,24 @@ Below are the step-by-step instructions to replicate this deployment.
   - Proceed with a custom installation, selecting "I don’t have a key" during installation.
   - Disable privacy settings if desired.
   - Choose a Domain Controller for login.
+    
+  ![WazuhSoar1](images/wazuh-soar1.jpeg)
+
 - Install necessary tools:
   - Install Google Chrome.
   - Download and install the Sysinternals Suite.
+
+  ![WazuhSoar2](images/wazuh-soar2.jpeg)
 
 ## 3. Setting Up the Droplet Firewall
 - Create a firewall in Digital Ocean:
   - Go to **Networking -> Firewalls -> Create Firewall**.
   - Add a rule to allow SSH access only for **your IP address**.
+ 
+  ![WazuhSoar3](images/wazuh-soar3.jpeg)
+  
+  ![WazuhSoar4](images/wazuh-soar4.jpeg)
+  
 - Edit Firewall Rules:
   - Assign the firewall to the droplet.
   - Ensure ports 80 and 443 are open for the Wazuh dashboard access.
@@ -41,18 +51,35 @@ sudo apt update -y && sudo apt upgrade -y
 curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
 
+  ![WazuhSoar5](images/wazuh-soar5.jpeg)
+
 - Access Wazuh Dashboard:
-  - Use the public IP of the droplet.
-  - Make sure ports 80 and 443 are enabled for external access.
-  - Make sure to save your Credentials for example:
-    - User: admin
-    - Password: YourCoolpasswordHer31!
+  - Use the public IP of the droplet. http://DROPLETIPADDRESS/
+  - Make sure ports 80 and 443 are enabled for you to access. Otherwise it will not work.
+ 
+  ![WazuhSoar6](images/wazuh-soar6.jpeg)
+  
+  ![WazuhSoar7](images/wazuh-soar7.jpeg)
+
 
 ## 5. Deploying TheHive
 - Create a new droplet:
   - Ubuntu 22.04 with at least **8 GB RAM**, similar specs as the Wazuh droplet.
 - Install TheHive: Follow the instructions provided at this repository:
-  - TheHive Install Instructions
+  - TheHive Install Instructions:
+  
+  The installation shall be done automatically using our **automated script** to install all necessary packets, compile and configure everything for us.
+
+  **Important**, please run the script as **root** to prevent any privilege problems.
+
+  ```bash
+  curl -O https://scripthpath
+  ```
+
+  Dont forget to tab enter these screens so it can continue the installation:
+
+  ![WazuhSoar8](images/wazuh-soar8.jpeg)
+
 - Configure Cassandra:
   - Edit the Cassandra configuration:
 ```bash
