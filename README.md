@@ -1,8 +1,4 @@
-# SOC-Wazuh-SOAR-TheHive-Automation-on-DigitalOcean
-Deploy a full security monitoring and automation stack with Wazuh, SOAR, TheHive, and Shuffle Automation on Digital Ocean. This project includes setup for both Linux and Windows clients, enabling seamless threat detection, response, and automation across virtualized environments with integrated workflows.
-
-
-# Project: Wazuh + SOAR + TheHive + Shuffle Automation Deployment
+# Project: Wazuh + SOAR + TheHive + Shuffle Automation Deployment on DigitalOcean
 
 This project involves the deployment of a security monitoring and automation stack using Wazuh, TheHive, and Shuffle Automation. The stack is deployed on Digital Ocean droplets, with both Windows and Linux clients connected. For the Windows client, we are using VirtualBox.
 Below are the step-by-step instructions to replicate this deployment.
