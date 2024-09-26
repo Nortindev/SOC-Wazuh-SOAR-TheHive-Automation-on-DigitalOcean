@@ -73,20 +73,27 @@ curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-in
   **Important**, please run the script as **root** to prevent any privilege problems.
 
   ```bash
-  curl -O https://scripthpath
+  curl -O https://raw.githubusercontent.com/Nortindev/SOC-Wazuh-SOAR-TheHive-Automation-on-DigitalOcean/refs/heads/main/TheHive_install.sh ; bash TheHive_install.sh
   ```
 
-  Dont forget to tab enter these screens so it can continue the installation:
+  The full installation can take around **10-30 minutes**.
+
+  Important: Dont forget to tab enter these screens so it can continue the installation:
 
   ![WazuhSoar8](images/wazuh-soar8.jpeg)
 
-- Configure Cassandra:
+  ![WazuhSoar9](images/wazuh-soar9.jpeg)
+
+- After the installation is done, now we can configure Cassandra:
   - Edit the Cassandra configuration:
 ```bash
 nano /etc/cassandra/cassandra.yaml
 ```
 
   - Set `listen_address` and `rpc_address` to your public IP.
+  - 
+  ![WazuhSoar10](images/wazuh-soar10.jpeg)
+      
   - Update the seed IP in the seed provider section.
   - Restart Cassandra:
 ```bash
