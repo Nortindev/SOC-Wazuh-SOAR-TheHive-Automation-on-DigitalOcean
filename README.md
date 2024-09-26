@@ -91,22 +91,76 @@ nano /etc/cassandra/cassandra.yaml
 ```
 
   - Set `listen_address` and `rpc_address` to your public IP.
-  - 
+    
   ![WazuhSoar10](images/wazuh-soar10.jpeg)
-      
+
+  ![WazuhSoar11](images/wazuh-soar11.jpeg)
+        
   - Update the seed IP in the seed provider section.
-  - Restart Cassandra:
+
+  ![WazuhSoar12](images/wazuh-soar12.jpeg)
+    
+ **5.1 - Additional Steps for Managing Cassandra Service**
+ 
+ We will need to remove the old files from the library, and restart the service.
+
+  1. Stop Cassandra Service:
 ```bash
-systemctl restart cassandra.service
+systemctl stop cassandra.service
 ```
 
-- Configure Elasticsearch:
-  - Edit the Elasticsearch configuration:
+  2. Remove Old Cassandra Files:
+```bash rm -rf /var/lib/cassandra/*
+```
+
+  3. Restart Cassandra Service:
+```bash systemctl start cassandra.service
+```
+
+  4. Check Cassandra Service Status it should be running now:
+```bash systemctl status cassandra.service
+```
+
+![WazuhSoar13](images/wazuh-soar13.jpeg)
+
+  **5.2 Configuring Elasticsearch**
+
+  1. Edit Elasticsearch Configuration:
 ```bash
 nano /etc/elasticsearch/elasticsearch.yml
 ```
 
-  - Un-comment the necessary settings like `cluster.name`, `node.name`, and `network.host`.
+2. Uncomment and Set Parameters:
+   - Uncomment `cluster.name` and set it to your hostname.
+   - Uncomment `node.name` and leave it as is.
+   - Uncomment `network.host` and set the port. Remember to open ports 7000 and 9200 in the firewall.
+
+![WazuhSoar14](images/wazuh-soar14.jpeg)
+
+![WazuhSoar15](images/wazuh-soar15.jpeg)
+
+3. Configure Cluster Master Seeds:
+   - Uncomment the relevant lines and remove the second seed as only one seed is used for this project. To scale, you can add more nodes to Elasticsearch.
+
+![WazuhSoar16](images/wazuh-soar16.jpeg)
+
+4. Save the File:
+   - Save the changes made to `elasticsearch.yml`.
+
+5. Start and Enable Elasticsearch Service:
+```bash
+systemctl start elasticsearch
+systemctl enable elasticsearch
+systemctl status elasticsearch
+```
+
+6. Verify Cassandra Service:
+```bash
+systemctl status cassandra.service
+```
+If all went well, cassandra should still be running. Make sure to check this.
+
+
 - Configure TheHive:
   - Edit TheHive configuration:
 ```bash
