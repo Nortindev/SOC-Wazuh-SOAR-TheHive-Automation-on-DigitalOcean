@@ -9,7 +9,7 @@ Check the full script here on my Github page: [The Hive Install Script](https://
 
 ## Check out here a video demonstration for this project! ##
 
-[Youtube Video Demonstration of the Project 🚀](https://www.youtube.com/watch?v=ZADB7X2qiIE) (Video Size 13 minutes 52s)
+[Youtube Video Demonstration of the Project 🚀](https://www.youtube.com/watch?v=ZADB7X2qiIE) (Video Duration 13 minutes 52s)
 
 ## 1. Pre-requisites
 - A Digital Ocean account to create droplets.
