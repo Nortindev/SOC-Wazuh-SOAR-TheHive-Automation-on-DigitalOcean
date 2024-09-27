@@ -7,6 +7,10 @@ This project also includes a **full automated script** to install TheHive + Cass
 
 Check the full script here on my Github page: [The Hive Install Script](https://github.com/Nortindev/SOC-Wazuh-SOAR-TheHive-Automation-on-DigitalOcean/blob/main/TheHive_install.sh)
 
+## Check out here a video demonstration for this project! ##
+
+[Youtube Video Demonstration of the Project 🚀 (Video Size 13 minutes 52s)](https://www.youtube.com/watch?v=ZADB7X2qiIE)
+
 ## 1. Pre-requisites
 - A Digital Ocean account to create droplets.
 - Access to VirtualBox for Windows VM.
