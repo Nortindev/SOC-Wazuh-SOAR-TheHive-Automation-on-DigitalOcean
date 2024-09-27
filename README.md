@@ -244,7 +244,7 @@ Note
 ![WazuhSoar21](images/wazuh-soar21.jpeg)
 
 - Restart Wazuh Agent:
-  - Restart the Wazuh agent service to apply the changes. This can be done on WINDOWS -> SERVICES -> RESTART Wazuh
+  - Restart the Wazuh agent service to apply the changes. This can be done on `WINDOWS -> SERVICES -> RESTART Wazuh`
 
 ## 8. Testing with Mimikatz
 
@@ -289,9 +289,11 @@ This will catch Mimikatz, with the original file name, even if the attacker chan
 
 Dont forget to restart manager after changes to ossec.conf.
 
+```bash
 systemctl restart wazuh-manager.service
 
 systemctl status wazuh-manager.service
+```
 
 - Build the workflow:
   - Use Shuffle to automate the incident response process:
