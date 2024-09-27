@@ -110,15 +110,19 @@ systemctl stop cassandra.service
 ```
 
   2. Remove Old Cassandra Files:
-```bash rm -rf /var/lib/cassandra/*
+
+```bash
+rm -rf /var/lib/cassandra/*
 ```
 
   3. Restart Cassandra Service:
-```bash systemctl start cassandra.service
+```bash
+systemctl start cassandra.service
 ```
 
   4. Check Cassandra Service Status it should be running now:
-```bash systemctl status cassandra.service
+```bash
+systemctl status cassandra.service
 ```
 
 ![WazuhSoar13](images/wazuh-soar13.jpeg)
