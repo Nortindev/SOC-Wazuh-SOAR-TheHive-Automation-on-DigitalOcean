@@ -3,7 +3,7 @@
 This project involves the deployment of a security monitoring and automation stack using Wazuh, TheHive, and Shuffle Automation. The stack is deployed on Digital Ocean droplets, with both Windows and Linux clients connected. For the Windows client, we are using VirtualBox.
 Below are the step-by-step instructions to replicate this deployment.
 
-**This project also includes a full automated script to install TheHive + Cassandra + JAVA + Elastic Search, all in one bundle, and making the configurations so TheHive can run smoothly!**
+This project also includes a **full automated script** to install TheHive + Cassandra + JAVA + Elastic Search, all in one bundle, and making the configurations so TheHive can run smoothly!
 
 Check the full script here on my Github page: [The Hive Install Script](https://github.com/Nortindev/SOC-Wazuh-SOAR-TheHive-Automation-on-DigitalOcean/blob/main/TheHive_install.sh)
 
