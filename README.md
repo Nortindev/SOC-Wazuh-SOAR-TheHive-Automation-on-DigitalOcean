@@ -419,11 +419,11 @@ Now for this part of the project, we are going to setup a new machine on Digital
 - Apache installed.
 - Install the Wazuh Agent on the Ubuntu Machine, the same way we did with windows, but now to Ubuntu, you can follow these steps
 
-(Wazuh - How to install Agent on all OS)[https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html]
+[Wazuh - How to install Agent on all OS](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html)
 
 For the correct fullfilment of the pre-requisites, make sure to check these steps from the official Wazuh documentation, this is the attack that we will emulate and monitor
 
-(Wazuh - Detecting an SQL Injection Attack)[https://documentation.wazuh.com/current/proof-of-concept-guide/detect-web-attack-sql-injection.html]
+[Wazuh - Detecting an SQL Injection Attack](https://documentation.wazuh.com/current/proof-of-concept-guide/detect-web-attack-sql-injection.html)
 
 1. **Create SQL Injection Detection Rule in Wazuh**:
    - After the necessary steps are followed in the document, now we will define a rule for detecting SQL injection attacks.
